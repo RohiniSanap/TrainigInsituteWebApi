@@ -10,11 +10,5 @@ namespace TrainigInsituteWebApi.Models
         [StringLength(70)]
         public string SkillName { get; set; }
 
-        [ForeignKey("Courses")]
-        public int CourseId { get; set; }
-        public virtual Course? Courses { get; set; }
-        [ForeignKey("Trainers")]
-        public int TrainerId { get; set; }
-        public virtual Trainer? Trainers { get; set; }
     }
 }
