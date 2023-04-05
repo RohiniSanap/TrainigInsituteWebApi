@@ -5,10 +5,19 @@ namespace TrainigInsituteWebApi.Models
 {
     public class Skill
     {
-        [Key]
+    public Skill()
+        {
+            this.Courses = new HashSet<Course>();
+        }
+      
+            
+    
+    [Key]
         public int SkillId { get; set; }
         [StringLength(70)]
         public string SkillName { get; set; }
 
-    }
+    public virtual ICollection<Course> Courses { get; set; }
+
+}
 }
